@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mango Weather</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+        <script src="https://unpkg.com/scrollreveal"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Mango Weather</h1>
+            <p>Providing quick and simple weather reports in New Zealand.</p>
+            <div class="form">
+                <div class="row">
+                    <div class="column">
+                        <form>
+                            <input type="text" id="area" placeholder="Town/City">
+                        </form>
+                    </div>
+
+                    <div class="column">
+                        <button type="button" onClick="requestWeatherData(document.getElementById('area').value);">View Weather</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="current">
+                <h6>Current Weather</h6>
+                <div class="row">
+                    <div class="column">
+                        <div id="location"></div>
+                        <div id="currentTemp"></div>
+                        <div id="description"></div>
+                    </div>
+
+                    <div class="column">
+                        <div id="visual"></div>
+                    </div>
+                </div>
+                <div id="data"></div>
+            </div>
+
+            <div id="forecast">
+                <h6>Five-Day Forecast</h6>
+                <div class="row">
+                    <div class="column-20">
+                        <div id="dayOne"></div>
+                        <div id="tempOne"></div>
+                    </div>
+    
+                    <div class="column-20">
+                        <div id="dayTwo"></div>
+                        <div id="tempTwo"></div>
+                    </div>
+    
+                    <div class="column-20">
+                        <div id="dayThree"></div>
+                        <div id="tempThree"></div>
+                    </div>
+    
+                    <div class="column-20">
+                        <div id="dayFour"></div>
+                        <div id="tempFour"></div>
+                    </div>
+    
+                    <div class="column-20">
+                        <div id="dayFive"></div>
+                        <div id="tempFive"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Made by Jedd Lupoy</p>
+        </div>
+        <script src="weather.js"></script>
+    </body>
+</html>
